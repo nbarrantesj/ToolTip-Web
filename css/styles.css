@@ -1,0 +1,41 @@
+body {
+    width: 100px;
+    padding-top: 100px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.tooltip {
+    border-radius: 3px;
+    font-size: 20px;
+    color: rgb(153, 240, 14);
+    background-color: black;
+    position: relative;
+}
+
+.tooltip:hover .tooltipText {
+    display: inline-block;
+}
+
+.tooltipText {
+    background-color: green;
+    color: white;
+    display: none;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 3px;
+    left: 0;
+    right: 0;
+    top: -40px;
+}
+
+.tooltipText::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 43px;
+    border-top: 8px solid green;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+}
